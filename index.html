@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Music Player</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <aside class="sidebar">
+            <input type="text" class="search-box" placeholder="Search...">
+            <div class="playlist" id="playlist"></div>
+        </aside>
+
+        <section class="now-playing">
+            <img id="cover-art" src="album.jpg" alt="Album Art">
+            <h2 id="current-title">Stuck in the moment</h2>
+            <p id="current-artist">Justin Bieber</p>
+        </section>
+    </main>
+
+    <footer class="player">
+        <div class="player-controls">
+            <div class="time-info">
+                <span id="current-time">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+
+            <div class="progress-bar" id="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+
+            <div class="buttons">
+                <button class="control-btn" id="shuffle">
+                    <i class="fas fa-random"></i>
+                </button>
+                <button class="control-btn" id="prev">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                <button class="control-btn play-pause" id="play">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button class="control-btn" id="next">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+                <button class="control-btn" id="repeat">
+                    <i class="fas fa-redo"></i>
+                </button>
+            </div>
+
+            <div class="volume-control">
+                <i class="fas fa-volume-up" id="volume-icon"></i>
+                <input type="range" id="volume" min="0" max="100" value="100">
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>
